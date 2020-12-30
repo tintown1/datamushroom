@@ -34,7 +34,7 @@ if ($level != 'admin') {
                 </td>
                 <td>
                   <div class="form-outline mb-4">
-                    <input type="text" id="m_cname" name="m_cname" class="form-control" required>
+                    <input type="text" id="m_cname" name="m_cname" class="form-control" required > 
                     <div class="invalid-feedback">
                       กรุณากรอกชื่อท้องถิ่น
                     </div>
@@ -168,18 +168,92 @@ if ($level != 'admin') {
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript">
-    $(function() {
-      $("#myform1").on("submit", function() {
-        var form = $(this)[0];
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
+  <script language="JavaScript">
+
+        document.getElementById('m_cname').onkeyup = function(e) {
+          if(e.keyCode == 32 && this.value.indexOf(' ') == 0) 
+          
+          {
+            console.log("space");
+              document.getElementById('m_cname').value = "";
+              return false;
+          }
         }
-        form.classList.add('was-validated');
-      });
-    });
-  </script>
+        document.getElementById('m_name').onkeyup = function(e) {
+          if(e.keyCode == 32 && this.value.indexOf(' ') == 0) 
+          
+          {
+            console.log("space");
+              document.getElementById('m_name').value = "";
+              return false;
+          }
+        }
+        document.getElementById('m_sname').onkeyup = function(e) {
+          if(e.keyCode == 32 && this.value.indexOf(' ') == 0) 
+          
+          {
+            console.log("space");
+              document.getElementById('m_sname').value = "";
+              return false;
+          }
+        }
+        document.getElementById('m_family').onkeyup = function(e) {
+          if(e.keyCode == 32 && this.value.indexOf(' ') == 0) 
+          
+          {
+            console.log("space");
+              document.getElementById('m_family').value = "";
+              return false;
+          }
+        }
+        document.getElementById('m_mush').onkeyup = function(e) {
+          if(e.keyCode == 32 && this.value.indexOf(' ') == 0) 
+          
+          {
+            console.log("space");
+              document.getElementById('m_mush').value = "";
+              return false;
+          }
+        }
+        document.getElementById('m_stalk').onkeyup = function(e) {
+          if(e.keyCode == 32 && this.value.indexOf(' ') == 0) 
+          
+          {
+            console.log("space");
+              document.getElementById('m_stalk').value = "";
+              return false;
+          }
+        }
+        document.getElementById('m_spore').onkeyup = function(e) {
+          if(e.keyCode == 32 && this.value.indexOf(' ') == 0) 
+          
+          {
+            console.log("space");
+              document.getElementById('m_spore').value = "";
+              return false;
+          }
+        }
+        document.getElementById('m_benefit').onkeyup = function(e) {
+          if(e.keyCode == 32 && this.value.indexOf(' ') == 0) 
+          
+          {
+            console.log("space");
+              document.getElementById('m_benefit').value = "";
+              return false;
+          }
+        }
+        document.getElementById('m_env').onkeyup = function(e) {
+          if(e.keyCode == 32 && this.value.indexOf(' ') == 0) 
+          
+          {
+            console.log("space");
+              document.getElementById('m_env').value = "";
+              return false;
+          }
+        }
+
+
+</script>
 </body>
 
 </html>
