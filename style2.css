@@ -1,0 +1,10 @@
+.content_left 
+{
+    float: left;
+    width: 70%;
+}
+.content_right 
+{
+    float: right;
+    width: 80%;
+}
