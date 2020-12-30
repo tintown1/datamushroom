@@ -47,49 +47,58 @@ $hedspo = $_POST["m_spore"];
 $hedben = $_POST["m_benefit"];
 $hedenv = $_POST["m_env"];
 
+echo $hedcname."<br>";
+echo $hedname."<br>";
+echo $hedsci."<br>";
+echo $hedfam."<br>";
+echo $hedmus."<br>";
+echo $hedsta."<br>";
+echo $hedspo."<br>";
+echo $hedben."<br>";
+echo $hedenv."<br>";
 
-$ext = pathinfo(basename($_FILES['m_pic']['name']), PATHINFO_EXTENSION);
-$new_image_name = 'img_'.uniqid().".".$ext;
-$image_path = "uploadshed/".$ext;
-$upload_path = $image_path.$new_image_name;
-//uploading
-$success = move_uploaded_file($_FILES['m_pic']['tmp_name'], $upload_path);
-if ($success=FALSE) {
-    echo "ไม่สามารถ upload รูปภาพได้";
-    exit(); 
-}
-	$hed_img = $new_image_name;
+// $ext = pathinfo(basename($_FILES['m_pic']['name']), PATHINFO_EXTENSION);
+// $new_image_name = 'img_'.uniqid().".".$ext;
+// $image_path = "uploadshed/".$ext;
+// $upload_path = $image_path.$new_image_name;
+// //uploading
+// $success = move_uploaded_file($_FILES['m_pic']['tmp_name'], $upload_path);
+// if ($success=FALSE) {
+//     echo "ไม่สามารถ upload รูปภาพได้";
+//     exit(); 
+// }
+// 	$hed_img = $new_image_name;
 
-	//เพิ่มข้อมูล
-	$sql = " INSERT INTO mushroom
-	(m_cname,m_name,m_sname,m_family,m_mush,m_stalk,m_spore,m_benefit,m_env,m_pic)
-	VALUES
-	('$hedcname', '$hedname', '$hedsci','$hedfam','$hedmus','$hedsta','$hedspo','$hedben','$hedenv','$hed_img')";
+// 	//เพิ่มข้อมูล
+// 	$sql = " INSERT INTO mushroom
+// 	(m_cname,m_name,m_sname,m_family,m_mush,m_stalk,m_spore,m_benefit,m_env,m_pic)
+// 	VALUES
+// 	('$hedcname', '$hedname', '$hedsci','$hedfam','$hedmus','$hedsta','$hedspo','$hedben','$hedenv','$hed_img')";
 	
 	
 
-	$result = mysqli_query($conn, $sql) or die ("Error in query: $sql " . mysqli_error());
+// 	$result = mysqli_query($conn, $sql) or die ("Error in query: $sql " . mysqli_error());
 	
-	//ปิดการเชื่อมต่อ database
-	mysqli_close($conn);
+// 	//ปิดการเชื่อมต่อ database
+// 	mysqli_close($conn);
 			
 			
 				
 				
-				//ถ้าสำเร็จให้ขึ้นอะไร
-	if ($result){
-		echo "<script type='text/javascript'>";
-		echo"alert('บันทึกข้อมูลสำเร็จ');";
-	    echo"window.location = 'admin.php';";
-		echo "</script>";
-		}
-		else {
-			//กำหนดเงื่อนไขว่าถ้าไม่สำเร็จให้ขึ้นข้อความและกลับไปหน้าเพิ่ม		
-				echo "<script type='text/javascript'>";
-				echo "alert('error!');";
-				echo"window.location = 'admin.php'; ";
-				echo"</script>";
-	}
+// 				//ถ้าสำเร็จให้ขึ้นอะไร
+// 	if ($result){
+// 		echo "<script type='text/javascript'>";
+// 		echo"alert('บันทึกข้อมูลสำเร็จ');";
+// 	    echo"window.location = 'admin.php';";
+// 		echo "</script>";
+// 		}
+// 		else {
+// 			//กำหนดเงื่อนไขว่าถ้าไม่สำเร็จให้ขึ้นข้อความและกลับไปหน้าเพิ่ม		
+// 				echo "<script type='text/javascript'>";
+// 				echo "alert('error!');";
+// 				echo"window.location = 'admin.php'; ";
+// 				echo"</script>";
+// 	}
 
 
 ?>
