@@ -26,7 +26,7 @@ if ($level != 'admin') {
       <div class="text-center" style="padding-left:10px; margin-top:20px;">
         <center><br /><br /><br />
           <p>เพิ่มข้อมูลเห็ด</p>
-          <form id="form1" name="form1" action="save_insert.php" method="post" enctype="multipart/form-data" >
+          <form id="form1" name="form1" action="save_insert.php" method="post" enctype="multipart/form-data"  onsubmit="return validateForm()">
             <table width="60%" border="0" cellpadding="0" cellspacing="0">
               <tr>
                 <td>
@@ -34,7 +34,7 @@ if ($level != 'admin') {
                 </td>
                 <td>
                   <div class="form-outline mb-4">
-                    <input type="text" id="m_cname" name="m_cname" class="form-control" required > 
+                    <input type="text" id="m_cname" name="m_cname" class="form-control"> 
                     <div class="invalid-feedback">
                       กรุณากรอกชื่อท้องถิ่น
                     </div>
@@ -252,7 +252,15 @@ if ($level != 'admin') {
           }
         }
 // สเปคบาข้างหน้าไม่ได้
-
+</script>
+<script language="JavaScript">
+function validateForm() {
+  var x = document.forms["form1"]["m_cname"].value;
+  if (x == "") {
+    alert("โปรดกรอกชื่อท้องถิ่น");
+    return false;
+  }
+}
 </script>
 </body>
 
