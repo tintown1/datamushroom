@@ -174,7 +174,7 @@ if ($level != 'admin') {
           if(e.keyCode == 32 && this.value.indexOf(' ') == 0) 
           
           {
-            console.log("space");
+            
               document.getElementById('m_cname').value = "";
               return false;
           }
@@ -183,7 +183,7 @@ if ($level != 'admin') {
           if(e.keyCode == 32 && this.value.indexOf(' ') == 0) 
           
           {
-            console.log("space");
+            
               document.getElementById('m_name').value = "";
               return false;
           }
@@ -192,7 +192,7 @@ if ($level != 'admin') {
           if(e.keyCode == 32 && this.value.indexOf(' ') == 0) 
           
           {
-            console.log("space");
+            
               document.getElementById('m_sname').value = "";
               return false;
           }
@@ -201,7 +201,7 @@ if ($level != 'admin') {
           if(e.keyCode == 32 && this.value.indexOf(' ') == 0) 
           
           {
-            console.log("space");
+            
               document.getElementById('m_family').value = "";
               return false;
           }
@@ -210,7 +210,7 @@ if ($level != 'admin') {
           if(e.keyCode == 32 && this.value.indexOf(' ') == 0) 
           
           {
-            console.log("space");
+            
               document.getElementById('m_mush').value = "";
               return false;
           }
@@ -219,7 +219,7 @@ if ($level != 'admin') {
           if(e.keyCode == 32 && this.value.indexOf(' ') == 0) 
           
           {
-            console.log("space");
+            
               document.getElementById('m_stalk').value = "";
               return false;
           }
@@ -228,7 +228,7 @@ if ($level != 'admin') {
           if(e.keyCode == 32 && this.value.indexOf(' ') == 0) 
           
           {
-            console.log("space");
+            
               document.getElementById('m_spore').value = "";
               return false;
           }
@@ -237,7 +237,7 @@ if ($level != 'admin') {
           if(e.keyCode == 32 && this.value.indexOf(' ') == 0) 
           
           {
-            console.log("space");
+            
               document.getElementById('m_benefit').value = "";
               return false;
           }
@@ -246,7 +246,7 @@ if ($level != 'admin') {
           if(e.keyCode == 32 && this.value.indexOf(' ') == 0) 
           
           {
-            console.log("space");
+            
               document.getElementById('m_env').value = "";
               return false;
           }
