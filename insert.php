@@ -251,7 +251,7 @@ if ($level != 'admin') {
               return false;
           }
         }
-
+// สเปคบาข้างหน้าไม่ได้
 
 </script>
 </body>
