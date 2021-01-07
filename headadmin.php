@@ -28,7 +28,7 @@
         </a>
       </li>
       <li>
-        <a href="insert.php">
+        <a href="insert2.php">
           <i class="fa fa-edit fa-lg"></i> เพิ่มข้อมูล
         </a>
       </li>

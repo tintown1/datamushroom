@@ -16,12 +16,6 @@ if ($level != 'admin') {
   <title>เพิ่มข้อมูลเห็ด</title>
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="style2.css">
-  <link href="validator.css" rel="stylesheet">
-  <script src="jquery.min.js"></script>
- <script src="bootstrap/js/bootstrap.min.js"></script>
- <script src="jquery.form.validator.min.js"></script>
- <script src="security.js"></script>
- <script src="file.js"></script>
 </head>
 
 <body background="#81FF9B">
@@ -32,7 +26,7 @@ if ($level != 'admin') {
       <div class="text-center" style="padding-left:10px; margin-top:20px;">
         <center><br /><br /><br />
           <p>เพิ่มข้อมูลเห็ด</p>
-          <form id="form" name="form" action="save_insert.php" method="post" enctype="multipart/form-data" class="form-horizontal" >
+          <form id="form1" name="form1" action="save_insert.php" method="post" enctype="multipart/form-data"  onsubmit="return validateForm()">
             <table width="60%" border="0" cellpadding="0" cellspacing="0">
               <tr>
                 <td>
@@ -40,7 +34,7 @@ if ($level != 'admin') {
                 </td>
                 <td>
                   <div class="form-outline mb-4">
-                    <input type="text" id="m_cname" name="m_cname" class="form-control"data-validation="required"> 
+                    <input type="text" id="m_cname" name="m_cname" class="form-control"> 
                     <div class="invalid-feedback">
                       กรุณากรอกชื่อท้องถิ่น
                     </div>
@@ -267,15 +261,8 @@ function validateForm() {
     return false;
   }
 }
+
 </script>
-<script>
- $.validate({
- modules: 'security, file',
- onModulesLoaded: function () {
- $('input[name="pass_confirmation"]').displayPasswordStrength();
- }
- });
- </script>
 </body>
 
 </html>
