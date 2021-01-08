@@ -12,10 +12,22 @@ if ($level != 'admin') {
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+<meta charset="utf-8">
+ 
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="description" content="">
+ <meta name="author" content="">
+ <link rel="icon" href="../../favicon.ico">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>เพิ่มข้อมูลเห็ด</title>
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="style2.css">
+  <link href="validator.css" rel="stylesheet">
+ <script src="jquery.min.js"></script>
+ <script src="bootstrap/js/bootstrap.min.js"></script>
+ <script src="jquery.form.validator.min.js"></script>
+ <script src="security.js"></script>
+ <script src="file.js"></script>
 </head>
 
 <body background="#81FF9B">
@@ -26,15 +38,17 @@ if ($level != 'admin') {
       <div class="text-center" style="padding-left:10px; margin-top:20px;">
         <center><br /><br /><br />
           <p>เพิ่มข้อมูลเห็ด</p>
-          <form id="form1" name="form1" action="save_insert.php" method="post" enctype="multipart/form-data"  onsubmit="return validateForm()">
+          <form class="form-horizontal" role="form" action="save_insert.php"  method="post" id="form" enctype="multipart/form-data">
             <table width="60%" border="0" cellpadding="0" cellspacing="0">
+            
               <tr>
                 <td>
                   <label class="form-label" for="form7Example1">ชื่อท้องถิ่น :</label>
                 </td>
                 <td>
+                
                   <div class="form-outline mb-4">
-                    <input type="text" id="m_cname" name="m_cname" class="form-control"> 
+                    <input type="text" id="m_cname" name="m_cname" class="form-control" data-validation="required"> 
                     <div class="invalid-feedback">
                       กรุณากรอกชื่อท้องถิ่น
                     </div>
@@ -165,9 +179,14 @@ if ($level != 'admin') {
   </center>
 
 
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script>
+ $.validate({
+ modules: 'security, file',
+ onModulesLoaded: function () {
+ $('input[name="pass_confirmation"]').displayPasswordStrength();
+ }
+ });
+ </script>
   <script language="JavaScript">
 
         document.getElementById('m_cname').onkeyup = function(e) {
