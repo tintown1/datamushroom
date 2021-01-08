@@ -94,7 +94,7 @@ if ($level != 'admin') {
  <div class="form-group">
  <label class="col-sm-3 control-label">รูปภาพเห็ด</label>
  <div class="col-sm-9">
- <input  data-validation="mime size"  data-validation-max-size="512kb" data-validation-allowing="jpg, png" name="m_pic" type="file">
+ <input  data-validation="mime size"  data-validation-max-size="512kb" data-validation-allowing="jpg, png" data-validation="required" id="m_pic" name="m_pic" type="file">
  </div>
  </div>
  
